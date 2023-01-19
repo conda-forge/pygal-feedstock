@@ -1,5 +1,6 @@
 {% set name = "pygal" %}
 {% set version = "2.4.0" %}
+{% set sha256 = "9204f05380b02a8a32f9bf99d310b51aa2a932cba5b369f7a4dc3705f0a4ce83" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,34 +8,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9204f05380b02a8a32f9bf99d310b51aa2a932cba5b369f7a4dc3705f0a4ce83
+  sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
+    - python
     - pip
-    - python >=3.6
-    - setuptools
-    - pyquery
-    - flask
-    - cairosvg
-    - lxml
-    - pytest
     - pytest-runner
-    - pytest-cov
-    - pytest-flake8
-    - coveralls
-    - tinycss
-    - cssselect
-    
   run:
-    - python >=3.6
+    - python
     - setuptools
-    
+
 test:
   imports:
     - pygal
@@ -52,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - Matt-BF
+    - abloemert
