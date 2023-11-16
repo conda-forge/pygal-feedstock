@@ -1,5 +1,5 @@
 {% set name = "pygal" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2923f95d2e515930aa5a997219dccefbf3d92b7eaf5fc1c9febb95b09935fdb2
+  sha256: dd2e2220bc0013a8c43c08c861d1db32601f12aecc243d4d639e7858b9f8af85
 
 build:
   number: 0
