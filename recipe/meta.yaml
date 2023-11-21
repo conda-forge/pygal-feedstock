@@ -21,6 +21,8 @@ requirements:
     - pip
   run:
     - python
+    - importlib_metadata
+    - lxml
 
 test:
   imports:
