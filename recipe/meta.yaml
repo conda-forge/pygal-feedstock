@@ -1,5 +1,5 @@
 {% set name = "pygal" %}
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygal-{{ version }}.tar.gz
-  sha256: 6c5da33f1041e8b30cbc980f8a34910d9edc584b833240298f6a25df65425289
+  sha256: c0a0f34e5bc1c01975c2bfb8342ad521e293ad42e525699dd00c4d7a52c14b71
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
